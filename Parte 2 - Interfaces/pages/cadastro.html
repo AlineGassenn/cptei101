@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+    <title>Cadastro</title>
+</head>
+<body>
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div id="navbarBasicExample" class="navbar-menu">
+          <div class="navbar-start">
+            <a class="navbar-item" href="../index.html">
+              Home
+            </a>
+      
+            <a class="navbar-item" href="../index.html#p1">
+              Imóveis
+            </a>
+    
+            <a class="navbar-item" href="../index.html#p2">
+                Corretores
+            </a>
+    
+            <a class="navbar-item" href="../index.html#p3">
+                Agende uma visita
+            </a>
+      
+            <div class="navbar-item has-dropdown is-hoverable">
+              <a class="navbar-link">
+                Consultas
+              </a>
+      
+              <div class="navbar-dropdown">
+                <a class="navbar-item" href="report/clientes.html">
+                  Clientes
+                </a>
+                <a class="navbar-item" href="report/imoveis.html">
+                    Imóveis
+                </a>
+                <a class="navbar-item" href="report/visitas.html">
+                  Visitas
+                </a>
+                
+              </div>
+            </div>
+          </div>
+      
+          <div class="navbar-end">
+            <div class="navbar-item">
+              <div class="buttons">
+                <a class="button is-link" href="cadastro.html">
+                  <strong>Cadastrar</strong>
+                </a>
+                <a class="button is-link is-light" href="login.html">
+                  Login
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+    <section class="section">
+        <div class="container mt-6">
+            <h1 class="title has-text-centered">Cadastra-se</h1>
+            <h2 class="subtitle has-text-centered">Venha conhecer nossos serviços estamos esperando você!</h2><br>   
+            <div class="column is-half is-offset-one-quarter has-text-left">
+                <div class="field">
+                    <label class="label">Nome completo</label>
+                    <div class="control">
+                    <input class="input is-medium" type="text" required />
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label class="label">Celular</label>
+                    <div class="control">
+                    <input class="input is-medium" type="text">
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label class="label">E-mail</label>
+                    <div class="control">
+                    <input class="input is-medium" type="email" required>
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label class="label">Categoria</label>
+                    <div class="control">
+                    <div class="select is-medium">
+                        <select>
+                          <option>--'--</option>
+                          <option>Cliente</option>
+                          <option>Corretor</option>
+                          <option>Proprietário</option>
+                        </select>
+                    </div>
+                    </div>
+                </div>
+              
+                <div class="field">
+                    <div class="control">
+                    <label class="checkbox">
+                        <input type="checkbox">
+                        Concordo com os termos de utilização e políticas de privacidade
+                    </label>
+                    </div>
+                </div>
+                
+                <div class="field is-grouped">
+                    <div class="control">
+                    <button class="button is-link" type="submit">Cadastrar</button>
+                    </div>
+                    <div class="control">
+                    <button class="button is-link is-light">Cancelar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer has-background-info-dark">
+        <div class="container">
+                <p class="is-uppercase is-size-4 has-text-white has-text-weight-bold">Imobiliária My House</p>
+                <p class="has-text-white">Av. Roraima nº 1000</p>
+                <p class="has-text-white">myhouse@email.com</p>
+                <p class="has-text-white">+(55) 3220-3030</p>
+        </div>
+      </footer>
+
+      <section class="section has-background-info p-0 m-0">
+          <div class="container">
+              <div class="columns is-flex is-align-items-center">
+                  <div class="column has-text-white is-flex is-justify-content-center">Desenvolvido por Aline Gassenn</div>
+              </div>
+          </div>
+      </section>
+</body>
+</html>

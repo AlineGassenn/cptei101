@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+    <title>Relatório Cliente</title>
+</head>
+<body>
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div id="navbarBasicExample" class="navbar-menu">
+          <div class="navbar-start">
+            <a class="navbar-item" href="../../index.html">
+              Home
+            </a>
+            <a class="navbar-item" href="../../index.html#p1">
+              Imóveis
+            </a>
+            <a class="navbar-item" href="../../index.html#p2">
+                Corretores
+            </a>
+            <a class="navbar-item" href="../../index.html#p3">
+                Agende uma visita
+            </a>
+            
+            <div class="navbar-item has-dropdown is-hoverable">
+                <a class="navbar-link">
+                  Consultas
+                </a>
+                <div class="navbar-dropdown">
+                  <a class="navbar-item" href="clientes.html">
+                    Clientes
+                  </a>
+                  <a class="navbar-item" href="imoveis.html">
+                      Imóveis
+                  </a>
+                  <a class="navbar-item" href="visitas.html">
+                    Visitas
+                  </a>
+                </div>
+            </div>
+          </div>
+          <div class="navbar-end">
+            <div class="navbar-item">
+              <div class="buttons">
+                <a class="button is-link" href="../cadastro.html">
+                  <strong>Cadastrar</strong>
+                </a>
+                <a class="button is-link is-light" href="../login.html">
+                  Login
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <section class="hero is-link">
+        <div class="hero-body">
+          <div class="container">
+            <h1 class="title">
+              Clientes
+            </h1>
+            <h2 class="subtitle">
+              Servindo bem para servir sempre.
+            </h2>
+          </div>
+        </div>
+      </section> 
+
+      <section class="section">
+          <div class="container">
+              <div class="tabs m-0 p-0">
+                  <ul>
+                      <li><a class="has-text-dark" href="clientes.html#c1">Cadastrar cliente</a></li>
+                      <li><a class="has-text-dark" href="clientes.html#c2">Listar clientes</a></li>
+                  </ul>
+              </div>
+          </div>
+      </section>
+
+    <section class="section" id="c1">
+        <div class="container">
+            <h1 class="title has-text-centered">Cadastrar Cliente</h1><br>
+            <div class="column is-half is-offset-one-quarter has-text-left">
+                <div class="field">
+                    <label class="label">Nome completo</label>
+                    <div class="control">
+                    <input class="input is-medium" type="text" required />
+                    </div>
+                </div>
+                <div class="field">
+                    <label class="label">Celular</label>
+                    <div class="control">
+                    <input class="input is-medium" type="text">
+                    </div>
+                </div>
+                <div class="field">
+                    <label class="label">E-mail</label>
+                    <div class="control">
+                    <input class="input is-medium" type="email" required>
+                    </div>
+                </div>
+                <div class="control">
+                    <button type="submit" class="button is-link is-fullwidth has-text-weight-medium is-medium">Cadastrar</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <hr>
+
+    <section class="section" id="c2">
+        <div class="container">
+            <h1 class="title has-text-centered">Nossos Clientes</h1><br>
+                <div class="columns features">
+                    <div class="column is-4">
+                      <div class="card is-shady">
+                        <div class="card-content">
+                          <div class="content">
+                            <h5>Tony Stark</h5>
+                            <p>tony@email.com</p>
+                            <p>(55) 3220-1111</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="column is-4">
+                        <div class="card is-shady">
+                        <div class="card-content">
+                            <div class="content">
+                            <h5>Steve Rogers</h5>
+                            <p>steve@email.com</p>
+                            <p>(55) 3220-2222</p>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="column is-4">
+                        <div class="card is-shady">
+                        <div class="card-content">
+                            <div class="content">
+                            <h5>Natasha Rommanoff</h5>
+                            <p>natasha@email.com</p>
+                            <p>(55) 3220-3333</p>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+                <div class="columns features">
+                    <div class="column is-4">
+                      <div class="card is-shady">
+                        <div class="card-content">
+                          <div class="content">
+                            <h5>Bruce Banner</h5>
+                            <p>bruce@email.com</p>
+                            <p>(55) 3220-4444</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="column is-4">
+                        <div class="card is-shady">
+                        <div class="card-content">
+                            <div class="content">
+                            <h5>Thor Odinson</h5>
+                            <p>thor@email.com</p>
+                            <p>(55) 3220-5555</p>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="column is-4">
+                        <div class="card is-shady">
+                        <div class="card-content">
+                            <div class="content">
+                            <h5>Clint Barton</h5>
+                            <p>clint@email.com</p>
+                            <p>(55) 3220-66666</p>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </section>
+
+    <footer class="footer has-background-info-dark">
+        <div class="container">
+                <p class="is-uppercase is-size-4 has-text-white has-text-weight-bold">Imobiliária My House</p>
+                <p class="has-text-white">Av. Roraima nº 1000</p>
+                <p class="has-text-white">myhouse@email.com</p>
+                <p class="has-text-white">+(55) 3220-3030</p>
+        </div>
+      </footer>
+
+      <section class="section has-background-info p-0 m-0">
+          <div class="container">
+              <div class="columns is-flex is-align-items-center">
+                  <div class="column has-text-white is-flex is-justify-content-center">Desenvolvido por Aline Gassenn</div>
+              </div>
+          </div>
+      </section>    
+</body>
+</html>

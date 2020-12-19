@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relatório de Imóveis</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+</head>
+<body>
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div id="navbarBasicExample" class="navbar-menu">
+          <div class="navbar-start">
+            <a class="navbar-item" href="../../index.html">
+              Home
+            </a>
+            <a class="navbar-item" href="../../index.html#p1">
+              Imóveis
+            </a>
+            <a class="navbar-item" href="../../index.html#p2">
+                Corretores
+            </a>
+            <a class="navbar-item" href="../../index.html#p3">
+                Agende uma visita
+            </a>
+            <div class="navbar-item has-dropdown is-hoverable">
+              <a class="navbar-link">
+                Consultas
+              </a>
+
+              <div class="navbar-dropdown">
+                  <a class="navbar-item" href="clientes.html">
+                    Clientes
+                  </a>
+                  <a class="navbar-item" href="imoveis.html">
+                      Imóveis
+                  </a>
+                  <a class="navbar-item" href="visitas.html">
+                    Visitas
+                  </a>
+              </div>
+            </div>
+          </div>
+      
+          <div class="navbar-end">
+            <div class="navbar-item">
+              <div class="buttons">
+                <a class="button is-link" href="../cadastro.html">
+                  <strong>Cadastrar</strong>
+                </a>
+                <a class="button is-link is-light" href="../login.html">
+                  Login
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <section class="hero is-link">
+        <div class="hero-body">
+          <div class="container">
+            <h1 class="title">
+              Imóveis
+            </h1>
+            <h2 class="subtitle">
+              Seu imóvel ideal está na imobiliária My House.
+            </h2>
+          </div>
+        </div>
+      </section> 
+
+    <section class="section">
+        <div class="container">
+            <div class="tabs m-0 p-0">
+                <ul>
+                  <li><a class="has-text-dark" href="imoveis.html#i1">Cadastrar Imóvel</a></li>
+                  <li><a class="has-text-dark" href="imoveis.html#i2">Listar Imóveis</a></li>
+                  <li><a class="has-text-dark" href="imoveis.html#i3">Controle de Vendas</a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="i1">
+        <div class="container">
+            <h1 class="title has-text-centered">Cadastrar Imóvel</h1><br>
+            <div class="columns">
+            <div class="column is-half is-offset-one-quarter has-text-left">
+                <div class="field">
+                    <label class="label">Endereço</label>
+                    <div class="control">
+                        <input class="input is-medium" type="text">
+                    </div>
+                </div>
+                <div class="field">
+                    <label class="label">Descrição</label>
+                    <div class="control">
+                        <input class="input is-medium" type="text">
+                    </div>
+                </div>
+                <div class="field">
+                    <label class="label">Propritário</label>
+                    <div class="control">
+                        <input class="input is-medium" type="text">
+                    </div>
+                </div>
+                <div class="field">
+                    <label class="label">Valor de venda</label>
+                    <div class="control">
+                        <input class="input is-medium" type="text">
+                    </div>
+                </div>
+                <div class="field">
+                    <label class="label">Valor IPTU</label>
+                    <div class="control">
+                        <input class="input is-medium" type="text">
+                    </div>
+                </div>
+                <div class="field">
+                    <label class="label">Área Total</label>
+                    <div class="control">
+                        <input class="input is-medium" type="text">
+                    </div>
+                </div>
+                <div class="field">
+                    <label class="label">Área Privativa</label>
+                    <div class="control">
+                        <input class="input is-medium" type="text">
+                    </div>
+                </div>
+                <div class="field">
+                    <label class="label">Área útil</label>
+                    <div class="control">
+                        <input class="input is-medium" type="text">
+                    </div>
+                </div>
+                <div class="field">
+                    <label class="label">Condominio</label>
+                    <div class="control">
+                        <input class="input is-medium" type="text">
+                    </div>
+                </div>
+                <div class="field">
+                    <label class="label">Número de quartos</label>
+                    <div class="control">
+                        <input class="input is-medium" type="text">
+                    </div>
+                </div>
+                <div class="field">
+                    <label class="label">Número de banheiros</label>
+                    <div class="control">
+                        <input class="input is-medium" type="text">
+                    </div>
+                </div>
+                
+                <div class="field">
+                    <label class="label">Vagas de garagem</label>
+                    <div class="control">
+                        <input class="input is-medium" type="text">
+                    </div>
+                </div>
+                <div class="field">
+                    <label class="label">Tipo</label>
+                    <div class="control">
+                    <div class="select">
+                        <select>
+                        <option>--'--</option>
+                        <option>Casa</option>
+                        <option>Apartamento</option>
+                        <option>Rural</option>
+                        </select>
+                    </div>
+                    </div>
+                </div>
+                <div class="field">
+                    <label class="label">Status</label>
+                    <div class="control">
+                    <div class="select">
+                        <select>
+                        <option>--'--</option>
+                        <option>Na planta</option>
+                        <option>Novo</option>
+                        <option>Usado</option>
+                        </select>
+                    </div>
+                    </div>
+                </div>
+                <div class="field">
+                    <label class="label">Características</label>
+                    <div class="control">
+                        <textarea class="textarea is-medium"></textarea>
+                    </div>
+                </div>
+                <div class="field">
+                    <label class="label">Comodidades</label>
+                    <div class="control">
+                        <textarea class="textarea is-medium"></textarea>
+                    </div>
+                </div>
+                <div class="control">
+                    <button type="submit" class="button is-link is-fullwidth has-text-weight-medium is-medium">Cadastrar</button>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <hr>
+
+    <section class="section" id="i2">
+        <div class="container">
+            <h1 class="title has-text-centered">Listar Imóveis</h1><br>
+                <div class="columns features">
+                    <div class="column is-4">
+                        <div class="card is-shady">
+                          <div class="card-image">
+                            <figure class="image is-640x480">
+                              <img src="https://bulma.io/images/placeholders/640x480.png">
+                            </figure>
+                          </div>
+                          <div class="card-content">
+                            <div class="content">
+                              <h4>Apartamento Residencial</h4>
+                              <p>cod.:8735</p>
+                              <p>Avenida Roraima, Camobi</p>
+                              <p>91m²</p>
+                              <h4>R$ 469.000,00</h4>
+                            </div>
+                          </div>
+                        </div>
+                      </div>  
+
+                      <div class="column is-4">
+                        <div class="card is-shady">
+                          <div class="card-image">
+                            <figure class="image is-640x480">
+                              <img src="https://bulma.io/images/placeholders/640x480.png">
+                            </figure>
+                          </div>
+                          <div class="card-content">
+                            <div class="content">
+                              <h4>Apartamento Residencial</h4>
+                              <p>cod.:8735</p>
+                              <p>Avenida Roraima, Camobi</p>
+                              <p>91m²</p>
+                              <h4>R$ 469.000,00</h4>
+                            </div>
+                          </div>
+                        </div>
+                      </div>  
+
+                      <div class="column is-4">
+                        <div class="card is-shady">
+                          <div class="card-image">
+                            <figure class="image is-640x480">
+                              <img src="https://bulma.io/images/placeholders/640x480.png">
+                            </figure>
+                          </div>
+                          <div class="card-content">
+                            <div class="content">
+                              <h4>Apartamento Residencial</h4>
+                              <p>cod.:8735</p>
+                              <p>Avenida Roraima, Camobi</p>
+                              <p>91m²</p>
+                              <h4>R$ 469.000,00</h4>
+                            </div>
+                          </div>
+                        </div>
+                      </div>  
+                </div>
+        </div>
+    </section>
+
+    <section class="section" id="i2">
+        <div class="container">
+                <div class="columns features">
+                    <div class="column is-4">
+                        <div class="card is-shady">
+                          <div class="card-image">
+                            <figure class="image is-640x480">
+                              <img src="https://bulma.io/images/placeholders/640x480.png">
+                            </figure>
+                          </div>
+                          <div class="card-content">
+                            <div class="content">
+                              <h4>Apartamento Residencial</h4>
+                              <p>cod.:8735</p>
+                              <p>Avenida Roraima, Camobi</p>
+                              <p>91m²</p>
+                              <h4>R$ 469.000,00</h4>
+                            </div>
+                          </div>
+                        </div>
+                      </div>  
+
+                      <div class="column is-4">
+                        <div class="card is-shady">
+                          <div class="card-image">
+                            <figure class="image is-640x480">
+                              <img src="https://bulma.io/images/placeholders/640x480.png">
+                            </figure>
+                          </div>
+                          <div class="card-content">
+                            <div class="content">
+                              <h4>Apartamento Residencial</h4>
+                              <p>cod.:8735</p>
+                              <p>Avenida Roraima, Camobi</p>
+                              <p>91m²</p>
+                              <h4>R$ 469.000,00</h4>
+                            </div>
+                          </div>
+                        </div>
+                      </div>  
+
+                      <div class="column is-4">
+                        <div class="card is-shady">
+                          <div class="card-image">
+                            <figure class="image is-640x480">
+                              <img src="https://bulma.io/images/placeholders/640x480.png">
+                            </figure>
+                          </div>
+                          <div class="card-content">
+                            <div class="content">
+                              <h4>Apartamento Residencial</h4>
+                              <p>cod.:8735</p>
+                              <p>Avenida Roraima, Camobi</p>
+                              <p>91m²</p>
+                              <h4>R$ 469.000,00</h4>
+                            </div>
+                          </div>
+                        </div>
+                      </div>  
+                </div>
+        </div>
+    </section>
+
+    <hr>
+
+    <section class="section" id="i3">
+        <div class="container">
+            <section class="section" id="i2">
+                <div class="container">
+                    <h1 class="title has-text-centered">Controle de vendas</h1><br>
+                        <div class="columns features">
+                            <div class="column is-4">
+                                <div class="card is-shady">
+                                  <div class="card-image">
+                                    <figure class="image is-640x480">
+                                      <img src="https://bulma.io/images/placeholders/640x480.png">
+                                    </figure>
+                                  </div>
+                                  <div class="card-content">
+                                    <div class="content">
+                                      <p>cod.:8735</p>
+                                      <p>Endereço</p>
+                                      <p>Descrição</p>
+                                      <p>Proprietário</p>
+                                      <p>Corretor</p>
+                                      <p>R$ 469.000,00</p>
+                                      <div class="control">
+                                        <button type="submit" class="button is-link is-fullwidth has-text-weight-medium is-medium">Vendido</button>
+                                    </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div> 
+                              
+                              <div class="column is-4">
+                                <div class="card is-shady">
+                                  <div class="card-image">
+                                    <figure class="image is-640x480">
+                                      <img src="https://bulma.io/images/placeholders/640x480.png">
+                                    </figure>
+                                  </div>
+                                  <div class="card-content">
+                                    <div class="content">
+                                      <p>cod.:8735</p>
+                                      <p>Endereço</p>
+                                      <p>Descrição</p>
+                                      <p>Proprietário</p>
+                                      <p>Corretor</p>
+                                      <p>R$ 469.000,00</p>
+                                      <div class="control">
+                                        <button type="submit" class="button is-link is-fullwidth has-text-weight-medium is-medium">Vendido</button>
+                                    </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>  
+
+                              <div class="column is-4">
+                                <div class="card is-shady">
+                                  <div class="card-image">
+                                    <figure class="image is-640x480">
+                                      <img src="https://bulma.io/images/placeholders/640x480.png">
+                                    </figure>
+                                  </div>
+                                  <div class="card-content">
+                                    <div class="content">
+                                      <p>cod.:8735</p>
+                                      <p>Endereço</p>
+                                      <p>Descrição</p>
+                                      <p>Proprietário</p>
+                                      <p>Corretor</p>
+                                      <p>R$ 469.000,00</p>
+                                      <div class="control">
+                                        <button type="submit" class="button is-link is-fullwidth has-text-weight-medium is-medium">Vendido</button>
+                                    </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>      
+                        </div>
+                </div>
+            </section>
+        </div>
+    </section>
+
+    <footer class="footer has-background-info-dark">
+        <div class="container">
+                <p class="is-uppercase is-size-4 has-text-white has-text-weight-bold">Imobiliária My House</p>
+                <p class="has-text-white">Av. Roraima nº 1000</p>
+                <p class="has-text-white">myhouse@email.com</p>
+                <p class="has-text-white">+(55) 3220-3030</p>
+        </div>
+      </footer>
+
+      <section class="section has-background-info p-0 m-0">
+          <div class="container">
+              <div class="columns is-flex is-align-items-center">
+                  <div class="column has-text-white is-flex is-justify-content-center">Desenvolvido por Aline Gassenn</div>
+              </div>
+          </div>
+      </section> 
+</body>
+</html>

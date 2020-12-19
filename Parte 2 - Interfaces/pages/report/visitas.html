@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+    <title>Relatório de visitas</title>
+</head>
+<body>
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div id="navbarBasicExample" class="navbar-menu">
+          <div class="navbar-start">
+            <a class="navbar-item" href="../../index.html">
+              Home
+            </a>
+
+            <a class="navbar-item" href="../../index.html#p1">
+              Imóveis
+            </a>
+
+            <a class="navbar-item" href="../../index.html#p2">
+                Corretores
+            </a>
+
+            <a class="navbar-item" href="../../index.html#p3">
+                Agende uma visita
+            </a>
+      
+            <div class="navbar-item has-dropdown is-hoverable">
+              <a class="navbar-link">
+                Consultas
+              </a>
+      
+              <div class="navbar-dropdown">
+                <a class="navbar-item" href="clientes.html">
+                  Clientes
+                </a>
+                <a class="navbar-item" href="imoveis.html">
+                    Imóveis
+                </a>
+                <a class="navbar-item" href="visitas.html">
+                  Visitas
+                </a>
+                
+              </div>
+            </div>
+          </div>
+      
+          <div class="navbar-end">
+            <div class="navbar-item">
+              <div class="buttons">
+                <a class="button is-link" href="../cadastro.html">
+                  <strong>Cadastrar</strong>
+                </a>
+                <a class="button is-link is-light" href="../login.html">
+                  Login
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <section class="hero is-link">
+        <div class="hero-body">
+          <div class="container">
+            <h1 class="title">
+              Visitas
+            </h1>
+            <h2 class="subtitle">
+              Confira de perto o nosso catálogo.
+            </h2>
+          </div>
+        </div>
+      </section> 
+
+    <section class="section">
+        <div class="container">
+            <div class="tabs m-0 p-0">
+                <ul>
+                  <li><a class="has-text-dark" href="visitas.html#v1">Agendar Visita</a></li>
+                  <li><a class="has-text-dark" href="visitas.html#v2">Listar visitas</a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="v1">
+        <div class="container">
+            <h1 class="title has-text-centered">Agendar Visita</h1><br>
+            <div class="columns">
+                <div class="column is-half is-offset-one-quarter has-text-left">
+                    <div class="field">
+                        <label class="label">Código do imóvel</label>
+                        <div class="control">
+                            <input class="input is-medium" type="text">
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label class="label">Cliente</label>
+                        <div class="control">
+                            <input class="input is-medium" type="text">
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label class="label">Corretor</label>
+                        <div class="control">
+                            <input class="input is-medium" type="text">
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label class="label">Hora</label>
+                        <div class="control">
+                            <input class="input is-medium" type="datetime-local">
+                        </div>
+                </div>
+                <div class="control">
+                    <button type="submit" class="button is-link is-fullwidth has-text-weight-medium is-medium">Agendar</button>
+                </div>
+        </div>
+    </section>
+
+    <hr>
+
+    <section class="section" id="v2">
+        <div class="container">
+            <h1 class="title has-text-centered">Listar Visitas</h1><br>
+            <div class="columns features">
+                <div class="column is-4">
+                    <div class="card is-shady">
+                      <div class="card-image">
+                        <figure class="image is-640x480">
+                          <img src="https://bulma.io/images/placeholders/640x480.png">
+                        </figure>
+                      </div>
+                      <div class="card-content">
+                        <div class="content">
+                          <h5>19/12/2020 - 14:00 horas</h5>
+                          <p>cod.:8735</p>
+                          <p>Cliente</p>
+                          <p>Corretor</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="column is-4">
+                    <div class="card is-shady">
+                      <div class="card-image">
+                        <figure class="image is-640x480">
+                          <img src="https://bulma.io/images/placeholders/640x480.png">
+                        </figure>
+                      </div>
+                      <div class="card-content">
+                        <div class="content">
+                          <h5>19/12/2020 - 14:00 horas</h5>
+                          <p>cod.:8735</p>
+                          <p>Cliente</p>
+                          <p>Corretor</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>  
+                  <div class="column is-4">
+                    <div class="card is-shady">
+                      <div class="card-image">
+                        <figure class="image is-640x480">
+                          <img src="https://bulma.io/images/placeholders/640x480.png">
+                        </figure>
+                      </div>
+                      <div class="card-content">
+                        <div class="content">
+                          <h5>19/12/2020 - 14:00 horas</h5>
+                          <p>cod.:8735</p>
+                          <p>Cliente</p>
+                          <p>Corretor</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>    
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer has-background-info-dark">
+        <div class="container">
+                <p class="is-uppercase is-size-4 has-text-white has-text-weight-bold">Imobiliária My House</p>
+                <p class="has-text-white">Av. Roraima nº 1000</p>
+                <p class="has-text-white">myhouse@email.com</p>
+                <p class="has-text-white">+(55) 3220-3030</p>
+        </div>
+      </footer>
+
+      <section class="section has-background-info p-0 m-0">
+          <div class="container">
+              <div class="columns is-flex is-align-items-center">
+                  <div class="column has-text-white is-flex is-justify-content-center">Desenvolvido por Aline Gassenn</div>
+              </div>
+          </div>
+      </section>
+</body>
+</html>
