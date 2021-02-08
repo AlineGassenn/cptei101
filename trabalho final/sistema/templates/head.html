@@ -1,0 +1,32 @@
+{% load static %}
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>My House | Sistema Imobiliário</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.14.0/js/all.js"></script>
+    <script defer src="{% static 'js/custom.js' %}"></script>
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'img/house.png' %}">
+    <style>
+        .navbar-item img {
+            height: 250px;
+        }
+
+        .navbar-item{
+            font-family: Arial, sans-serif;
+            font-size: 12pt;
+        }
+
+
+        a.navbar-item:hover {
+            background-color: #FFFFE0;
+            font: white;
+            text-decoration: none;
+        }
+
+        .dropdown-menu {
+            top: 60%;
+        }
+
+    </style>
+</head>

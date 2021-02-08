@@ -1,0 +1,177 @@
+<style>
+    span a {
+        color:white;
+    }
+</style>
+<section class="hero is-dark is-fullheight-with-navbar" style="background-image: url('../static/img/up3.jpg'); background-size: cover;">
+
+            <div class="hero-body">
+                <div class="container">
+                    <h1 class="title">Sistema Imobiliário My House</h1>
+                    <h2 class="subtitle">A sua solução residencial você encontra aqui!</h2>
+                </div>
+
+            </div>
+        </section>
+
+      <section class="section">
+          <div class="section">
+            <article class="container">
+                <h1 class="title has-text-centered">My House</h1>
+                <h2 class="subtitle has-text-centered">A my house é um sistema imobiliário que vai lhe surpreender!</h2><br>
+                    <div class="columns has-text-justify p-3">
+                        <div class="column">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab nostrum dolorum officia, dolore
+                                cumque suscipit consectetur culpa! Laborum minus quibusdam mollitia nemo, nam aliquid placeat
+                                consequatur velit quo praesentium iure? Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Ab nostrum dolorum officia, dolore cumque suscipit consectetur culpa! Laborum minus quibusdam
+                                mollitia nemo, nam aliquid placeat consequatur velit quo praesentium iure?
+                            </p>
+                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab nostrum dolorum officia, dolore
+                                cumque suscipit consectetur culpa! Laborum minus quibusdam mollitia nemo, nam aliquid placeat
+                                consequatur velit quo praesentium iure? Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Ab nostrum dolorum officia, dolore cumque suscipit consectetur culpa! Laborum minus quibusdam
+                                mollitia nemo, nam aliquid placeat consequatur velit quo praesentium iure?
+                            </p>
+                        </div>
+                    </div>
+            </article>
+          </div>
+      </section>
+
+     <hr>
+
+      <section class="section">
+          <div class="section">
+            <article class="container">
+                <h1 class="title has-text-centered">Nossos Serviços</h1>
+                <h2 class="subtitle has-text-centered">Venha conhecer nossos serviços estamos esperando você!</h2><br>
+                    <div class="columns has-text-centered p-3">
+                        <div class="column">
+                            <a href="{% url 'imoveis' %}">
+                                <span class="icon">
+                                  <i class="fas fa-3x fa-search"></i>
+                                </span><br><br>
+                                <p>Compra e venda</p>
+                            </a>
+                        </div>
+
+                        <div class="column">
+                            <a href="{% url 'corretores' %}">
+                                <span class="icon">
+                                  <i class="fas fa-3x fa-handshake"></i>
+                                </span><br><br>
+                                <p>Consultoria</p>
+                            </a>
+                        </div>
+
+                        <div class="column">
+                            <a href="{% url 'imoveis' %}">
+                                <span class="icon">
+                                  <i class="fas fa-3x fa-home"></i>
+                                </span><br><br>
+                                <p>Imóveis</p>
+                            </a>
+                        </div>
+
+                        <div class="column">
+                            <a href="{% url 'clientes' %}">
+                                <span class="icon">
+                                  <i class="fas fa-3x fa-users"></i>
+                                </span><br><br>
+                                <p>Clientes</p>
+                            </a>
+                        </div>
+                    </div>
+              </article>
+          </div>
+      </section>
+
+      <hr>
+
+      <section class="section" id="p1">
+          <div class="container">
+              <h1 class="title has-text-centered">Imóveis</h1>
+              <h2 class="subtitle has-text-centered">Temos a solução perfeita para seu conceito habitacional. Confira!</h2><br>
+
+            <div class="columns features">
+                <div class="column is-4">
+                  <div class="card is-shady">
+                    <div class="card-image">
+                      <figure class="image is-640x480">
+                        <img src="https://bulma.io/images/placeholders/640x480.png">
+                      </figure>
+                    </div>
+                    <div class="card-content">
+                        <div class="content">
+                            <h4>Imóveis Rurais</h4>
+                            <button class="button is-info" type="submit">
+                                <span class="icon is-small">
+                                   <i class="fas fa-home"></i>
+                                </span>
+                                <span>
+                                    <a  href="{% url 'visita_adicionar' %}">
+                                        Agendar Visita
+                                    </a>
+                                </span>
+                            </button>
+
+                        </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="column is-4">
+                  <div class="card is-shady">
+                    <div class="card-image">
+                      <figure class="image is-640x480">
+                        <img src="https://bulma.io/images/placeholders/640x480.png">
+                      </figure>
+                    </div>
+                    <div class="card-content">
+                        <div class="content">
+                            <h4>Apartamentos Residenciais</h4>
+                            <button class="button is-info" type="submit">
+                                <span class="icon is-small">
+                                   <i class="fas fa-home"></i>
+                                </span>
+                                <span>
+                                    <a  href="{% url 'visita_adicionar' %}">
+                                        Agendar Visita
+                                    </a>
+                                </span>
+                            </button>
+
+                        </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="column is-4">
+                    <div class="card is-shady">
+                        <div class="card-image">
+                          <figure class="image is-640x480">
+                            <img src="https://bulma.io/images/placeholders/640x480.png">
+                          </figure>
+                        </div>
+                      <div class="card-content">
+                          <div class="content">
+                              <h4>Imóveis Comerciais</h4>
+
+                               <button class="button is-info" type="submit">
+                                    <span class="icon is-small">
+                                       <i class="fas fa-home"></i>
+                                    </span>
+                                    <span>
+                                        <a  href="{% url 'visita_adicionar' %}">
+                                        Agendar Visita
+                                        </a>
+                                    </span>
+                                </button>
+                          </div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+      </section>

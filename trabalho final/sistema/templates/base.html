@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+{% load static %}
+<html class="no-js" lang="pt-br">
+{% block head %}
+{% include "head.html" %}
+{% endblock %}
+
+<body>
+    <section class="section has-background-grey-light">
+        <div class="container">
+            <nav class="navbar has-background-grey-light" role="navigation" aria-label="main navigation">
+                <div class="navbar-brand">
+                    <a class="navbar-item" href="{% url 'index' %}">
+                        <img src="{% static 'img/logo (3).png' %}" width="100" height="115">
+                    </a>
+                    <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false"
+                        data-target="navbarBasicExample">
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                    </a>
+                </div>
+                <div id="navbarBasicExample" class="navbar-menu">
+                    <div class="navbar-start">
+                    </div>
+                    <div class="navbar-end">
+                        <a class="navbar-item has-text-black" href="{% url 'index' %}">
+                            Home
+                        </a>
+
+                        <div class="navbar-item dropdown is-hoverable has-text-black">
+                            <div class="dropdown-trigger">
+                                <li class="is-inline-block" aria-haspopup="true" aria-controls="dropdown-menu">
+                                    <span>Corretores</span>
+                                    <span class="icon is-small">
+                                        <i class="fas fa-angle-down" aria-hidden="true"></i>
+                                    </span>
+                                </li>
+                            </div>
+                            <div class="dropdown-menu" id="dropdown-menu" role="menu" style="z-index: 1000;">
+                                <div class="dropdown-content">
+                                    <a href="{% url 'corretor_adicionar' %}" class="dropdown-item">
+                                        Cadastrar Corretor
+                                    </a>
+                                    <a href="{% url 'corretores' %}" class="dropdown-item">
+                                        Listar Corretores
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="navbar-item dropdown is-hoverable has-text-black">
+                            <div class="dropdown-trigger">
+                                <li class="is-inline-block" aria-haspopup="true" aria-controls="dropdown-menu">
+                                    <span>Clientes</span>
+                                    <span class="icon is-small">
+                                        <i class="fas fa-angle-down" aria-hidden="true"></i>
+                                    </span>
+                                </li>
+                            </div>
+                            <div class="dropdown-menu" id="dropdown-menu" role="menu" style="z-index: 1000;">
+                                <div class="dropdown-content">
+                                    <a href="{% url 'cliente_adicionar' %}" class="dropdown-item">
+                                        Cadastrar Cliente
+                                    </a>
+                                    <a href="{% url 'clientes' %}" class="dropdown-item">
+                                        Listar Clientes
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="navbar-item dropdown is-hoverable has-text-black">
+                            <div class="dropdown-trigger">
+                                <li class="is-inline-block" aria-haspopup="true" aria-controls="dropdown-menu">
+                                    <span>Proprietários</span>
+                                    <span class="icon is-small">
+                                        <i class="fas fa-angle-down" aria-hidden="true"></i>
+                                    </span>
+                                </li>
+                            </div>
+                            <div class="dropdown-menu" id="dropdown-menu" role="menu" style="z-index: 1000;">
+                                <div class="dropdown-content">
+                                    <a href="{% url 'proprietario_adicionar' %}" class="dropdown-item">
+                                        Cadastrar Proprietário
+                                    </a>
+                                    <a href="{% url 'proprietarios' %}" class="dropdown-item">
+                                        Listar Proprietários
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="navbar-item dropdown is-hoverable has-text-black">
+                            <div class="dropdown-trigger">
+                                <li class="is-inline-block" aria-haspopup="true" aria-controls="dropdown-menu">
+                                    <span>Imovéis</span>
+                                    <span class="icon is-small">
+                                        <i class="fas fa-angle-down" aria-hidden="true"></i>
+                                    </span>
+                                </li>
+                            </div>
+                            <div class="dropdown-menu" id="dropdown-menu" role="menu" style="z-index: 1000;">
+                                <div class="dropdown-content">
+                                    <a href="{% url 'imovel_adicionar' %}" class="dropdown-item">
+                                        Cadastrar Imóvel
+                                    </a>
+                                    <a href="{% url 'imoveis' %}" class="dropdown-item">
+                                        Listar Imóveis
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                         <div class="navbar-item dropdown is-hoverable has-text-black">
+                            <div class="dropdown-trigger">
+                                <li class="is-inline-block" aria-haspopup="true" aria-controls="dropdown-menu">
+                                    <span>Visitas</span>
+                                    <span class="icon is-small">
+                                        <i class="fas fa-angle-down" aria-hidden="true"></i>
+                                    </span>
+                                </li>
+                            </div>
+                            <div class="dropdown-menu" id="dropdown-menu" role="menu" style="z-index: 1000;">
+                                <div class="dropdown-content">
+                                    <a href="{% url 'visita_adicionar' %}" class="dropdown-item">
+                                        Cadastrar Visita
+                                    </a>
+                                    <a href="{% url 'visitas' %}" class="dropdown-item">
+                                        Listar Visitas
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </section>
+    {% block content %} {% endblock %}
+    {% block footer %}
+    {% include "footer.html" %}
+    {% endblock %}
+</body>
+
+</html>

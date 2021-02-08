@@ -1,0 +1,46 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+    {% block head %}
+        {% include "head.html" %}
+    {% endblock %}
+<body>
+    <div class="container has-text-centered">
+            <h1 class="title is-size-1">Sistema Imobiliário</h1>
+    </div>
+    <section class="section has-background-link-light">
+
+        {% if object_list %}
+    <center><h1 class="subtitle is-size-4">Visitas cadastrados</h1></center>
+    <div class="table">
+        <table class="table is-table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
+            <thead>
+            <tr>
+                <th class = "has-text-centered">Imóvel</th>
+                <th class = "has-text-centered">Data</th>
+                <th class = "has-text-centered">Hora</th>
+                <th class = "has-text-centered">Cliente</th>
+                <th class = "has-text-centered">Corretor</th>
+
+            </tr>
+            </thead>
+            <tbody>
+            {% for visita in object_list %}
+            <tr>
+                <td>{{visita.imovel}}</td>
+                <td>{{visita.data}}</td>
+                <td>{{visita.hora}}</td>
+                <td>{{visita.cliente}}</td>
+                <td>{{visita.corretor}}</td>
+            </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+        {% else %}
+        <h2>Não existem visitas cadastrados!</h2>
+        {% endif %}
+    </section>
+
+</body>
+</html>

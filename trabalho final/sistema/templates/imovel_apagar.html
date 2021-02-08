@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% block content %}
+<style>
+    button a {
+        color:white;
+    }
+</style>
+<section class="section">
+    <div class="container">
+        <div class="columns is-mobile">
+            <div class="column is-half is-offset-one-quarter">
+                <h3 class="title is-size-3">Dados do Imóvel</h3>
+                <p class="p-2 mt-2"><strong>Código: </strong> {{ object.codigo }} </p>
+                <p class="p-2 mt-2"><strong>Endereço: </strong> {{ object.endereco }} </p>
+                <p class="p-2 mt-2"><strong>Proprietário: </strong> {{ object.proprietario }} </p>
+                 <p class="p-2 mt-2"><strong>Valor de venda: </strong> {{ object.valor_venda }} </p>
+                 <p class="p-2 mt-2"><strong>Valor do IPTU: </strong> {{ object.iptu }} </p>
+                 <p class="p-2 mt-2"><strong>Valor do condomínio: </strong> {{ object.condominio }} </p>
+                 <p class="p-2 mt-2"><strong>Área Total: </strong> {{ object.area_total }} </p>
+                 <p class="p-2 mt-2"><strong>Área Privativa: </strong> {{ object.area_privativa }} </p>
+                 <p class="p-2 mt-2"><strong>Área Útil: </strong> {{ object.area_util }} </p>
+                 <p class="p-2 mt-2"><strong>Descrição: </strong> {{ object.descricao }} </p>
+                 <p class="p-2 mt-2"><strong>Número de quartos: </strong> {{ object.num_quartos }} </p>
+                 <p class="p-2 mt-2"><strong>Número de banheiros: </strong> {{ object.num_banheiro }} </p>
+                 <p class="p-2 mt-2"><strong>Vagas de garagem: </strong> {{ object.num_garagem }} </p>
+                 <p class="p-2 mt-2"><strong>Tipo: </strong> {{ object.tipo }} </p>
+                 <p class="p-2 mt-2"><strong>Status: </strong> {{ object.status }} </p>
+                 <p class="p-2 mt-2"><strong>Comodidades: </strong> {{ object.comodidade }} </p>
+                <img src="{{ imovel.foto.thumb.url }}" class="img-fluid" alt=""/>
+                <form method="POST" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    <p> Confirma a exclusão do imóvel "{{ object }}"? </p>
+                    <br/>
+                    <button class="button is-link is-primary" type="submit">Apagar</button>
+                    <button class="button is-danger is-pulled-right" type="reset">
+                        <a href="{% url 'imoveis' %}">Cancelar</a>
+                    </button>
+                </form>
+            </div>
+            </div>
+        </div>
+</section>
+{% endblock %}

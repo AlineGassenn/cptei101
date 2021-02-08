@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% block content %}
+<style>
+    button a {
+        color:white;
+    }
+</style>
+<section class="section">
+    <div class="container">
+        <div class="columns is-mobile">
+            <div class="column is-half is-offset-one-quarter">
+                <h3 class="title is-size-3">Dados da Visita</h3>
+                <p class="p-2 mt-2"><strong>Data: </strong> {{ object.data }} </p>
+                <p class="p-2 mt-2"><strong>Hora: </strong> {{ object.hora }} </p>
+                <p class="p-2 mt-2"><strong>Corretor: </strong> {{ object.corretor }} </p>
+                <p class="p-2 mt-2"><strong>Cliente: </strong> {{ object.cliente }} </p>
+                <form method="POST" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    <p> Confirma a exclusão da visita "{{ object }}"? </p>
+                    <br/>
+                    <button class="button is-link is-primary" type="submit">Apagar</button>
+                    <button class="button is-danger is-pulled-right" type="reset">
+                        <a href="{% url 'visitas' %}">Cancelar</a>
+                    </button>
+                </form>
+            </div>
+            </div>
+        </div>
+</section>
+{% endblock %}

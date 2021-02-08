@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<section class="section">
+    <div class="container">
+        <form id="formListaClientes" action="" method="GET">
+            {% csrf_token %}
+            <input type="hidden" name="imprimir" id="imprimir" value="">
+            <div class="field is-grouped is flex is-align-items-center is-flex-wrap-wrap">
+                <label class="label p-2 mt-2">Nome do Cliente:</label>
+                <div class="control is-expanded">
+                    <input class="input" type="text" name="buscar" value="{{request.GET.buscar}}"
+                           placeholder="Digite o nome do cliente">
+                </div>
+                <div class="control">
+                    <button type="submit" class="button is-link" onClick="geraPdf('', 'formListaClientes');">
+                        Buscar
+                    </button>
+                </div>
+                {% if object_list %}
+                <div class="control">
+                    <button type="button" class="button is-link" onClick="geraPdf('pdf', 'formListaClientes');">
+                        Imprimir
+                    </button>
+                </div>
+                {% endif %}
+            </div>
+        </form><br>
+{% if object_list %}
+    <center><h1 class="subtitle is-size-4">Clientes Cadastrados</h1></center><br>
+    <div class="table">
+        <table class="table is-table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
+            <thead>
+            <tr>
+                <th class = "has-text-centered">Nome</th>
+                <th class = "has-text-centered">Celular</th>
+                <th class = "has-text-centered">E-mail</th>
+                <th class = "has-text-centered" style="width:100px;">Ações</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for cliente in object_list %}
+            <tr>
+                <td>{{cliente.nome}}</td>
+                <td>{{cliente.celular}}</td>
+                <td>{{cliente.email}}</td>
+                <td class="has-text-centered is-flex is-flex-wrap-nowrap is-justify-content-center">
+                        <a href="{% url 'cliente_editar' cliente.pk %}">
+                            <span class="icon">
+                                <i class="fas fa-edit"></i>
+                            </span>
+                        </a>
+                        <a href="{% url 'cliente_apagar' cliente.pk %}">
+                            <span class="icon">
+                                <i class="far fa-trash-alt"></i>
+                            </span>
+                        </a>
+                </td>
+            </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+        {% else %}
+        <h2>Não existem clientes cadastrados!</h2>
+        {% endif %}
+    </div>
+</section>
+{% endblock %}

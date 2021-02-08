@@ -1,0 +1,51 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+    {% block head %}
+        {% include "head.html" %}
+    {% endblock %}
+<body>
+     <div class="container has-text-centered">
+            <h1 class="title is-size-1">Sistema Imobiliário</h1>
+        </div>
+        <section class="section has-background-link-light">
+
+            {% if object_list %}
+    <center><h1 class="subtitle is-size-4">Proprietários cadastrados</h1></center>
+    <div class="table">
+        <table class="table is-table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
+            <thead>
+            <tr>
+                <th class = "has-text-centered">Nome</th>
+                <th class = "has-text-centered">Celular</th>
+                <th class = "has-text-centered">E-mail</th>
+                <th class = "has-text-centered">Imóveis</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for proprietario in object_list %}
+            <tr>
+                <td>{{proprietario.nome}}</td>
+                <td>{{proprietario.celular}}</td>
+                <td>{{proprietario.email}}</td>
+                 <td>
+                    {% for imovel in proprietario.imoveis %}
+                        {% if forloop.last %}
+                            {{ imovel }}
+                        {% else %}
+                            {{ imovel }},
+                        {% endif %}
+                    {% endfor %}
+                </td>
+            </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+        {% else %}
+        <h2>Não existem proprietários cadastrados!</h2>
+        {% endif %}
+    </div>
+</section>
+</body>
+</html>

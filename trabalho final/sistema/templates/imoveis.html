@@ -1,0 +1,117 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<section class="section">
+    <div class="container">
+        <form id="formListaImoveis" action="" method="GET">
+            {% csrf_token %}
+            <input type="hidden" name="imprimir" id="imprimir" value="">
+            <div class="field is-grouped is flex is-align-items-center is-flex-wrap-wrap">
+                <label class="label p-2 mt-2">Código do Imóvel:</label>
+                <div class="control is-expanded">
+                    <input class="input" type="text" name="buscar" value="{{request.GET.buscar}}"
+                           placeholder="Digite o código do imóvel">
+                </div>
+               <div class="control">
+                    <button type="submit" class="button is-link" onClick="geraPdf('', 'formListaImoveis');">
+                        Buscar
+                    </button>
+                </div>
+                {% if object_list %}
+                <div class="control">
+                    <button type="button" class="button is-link" onClick="geraPdf('pdf', 'formListaImoveis');">
+                        Imprimir
+                    </button>
+                </div>
+                {% endif %}
+            </div>
+        </form><br>
+{% if object_list %}
+    <center><h1 class="subtitle is-size-4">Imóveis Cadastrados</h1></center><br>
+    <div class="table">
+        <table class="table is-table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
+            <thead>
+            <tr>
+                <th class = "has-text-centered">Código</th>
+                <th class = "has-text-centered">Endereço</th>
+                <th class = "has-text-centered">Valor de Venda</th>
+                <th class = "has-text-centered">Área Total</th>
+                <th class = "has-text-centered">Quartos</th>
+                <th class = "has-text-centered">Banheiros</th>
+                <th class = "has-text-centered">Garagem</th>
+                <th class = "has-text-centered" style="width: 100px;">Ações </th>
+
+            </tr>
+            </thead>
+            <tbody>
+            {% for imovel in object_list %}
+            <tr>
+                <td><a href="#" data_toggle="modal" class="modal-target" data-bulma-modal="modal{{imovel.id}}"
+                        id="modal{{imovel.id}}">{{imovel.codigo}}</a></td>
+                <td>{{imovel.endereco}}</td>
+                <td>{{imovel.valor_venda}}</td>
+                <td>{{imovel.area_total}}</td>
+                <td>{{imovel.num_quarto}}</td>
+                <td>{{imovel.num_banheiro}}</td>
+                <td>{{imovel.num_garagem}}</td>
+                <td class="has-text-centered is-flex is-flex-wrap-nowrap is-justify-content-center">
+                        <a href="{% url 'imovel_editar' imovel.pk %}">
+                            <span class="icon">
+                                <i class="fas fa-edit"></i>
+                            </span>
+                        </a>
+                        <a href="{% url 'imovel_apagar' imovel.pk %}">
+                            <span class="icon">
+                                <i class="far fa-trash-alt"></i>
+                            </span>
+                        </a>
+                </td>
+
+
+                 <div class="modal" id="modal{{imovel.id}}">
+                            <div class="modal-background"></div>
+                            <div class="modal-card">
+                                <header class="modal-card-head">
+                                    <p class="modal-card-title">Imóvel: {{ imovel.codigo }}</p>
+                                    <button class="delete" aria-label="close" data-bulma-modal="close"
+                                            id="btnClose"></button>
+                                </header>
+                                <section class="modal-card-body is-flex is-justify-content-center">
+                                    <div class="content">
+                                        <p class="image is-128x128">
+                                            <img src="{{ imovel.foto.thumb.url }}" class="img-fluid" alt=""/>
+                                        </p>
+
+                                         <p>Proprietário: {{imovel.proprietario}}</p>
+                                         <p>Valor de venda: {{imovel.valor_venda}}</p>
+                                         <p>Valor do IPTU: {{imovel.iptu}}</p>
+                                         <p>Valor de condominio: {{imovel.condominio}}</p>
+                                         <p>Área Total: {{imovel.area_total}}</p>
+                                         <p>Área Privativa: {{imovel.area_privativa}}</p>
+                                         <p>Área Útil: {{imovel.area_util}}</p>
+                                         <p>Descrição: {{imovel.descricao}}</p>
+                                         <p>Número de quartos: {{imovel.num_quarto}}</p>
+                                         <p>Número de banheiros: {{imovel.num_banheiro}}</p>
+                                         <p>Vagas de garagem: {{imovel.num_garagem}}</p>
+                                         <p>Tipo: {{imovel.tipo}}</p>
+                                         <p>Status: {{imovel.status}}</p>
+                                         <p>Comodidades: {{imovel.comodidade}}</p>
+                                    </div>
+                                </section>
+                                <footer class="modal-card-foot">
+                                    <p>Endereço: {{ imovel.endereco }}</p>
+                                </footer>
+                            </div>
+                 </div>
+            </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+        {% else %}
+        <h2>Não existem imóveis cadastrados!</h2>
+        {% endif %}
+    </div>
+</section>
+{% endblock %}
